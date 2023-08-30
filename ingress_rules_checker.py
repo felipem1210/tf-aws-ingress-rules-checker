@@ -54,6 +54,7 @@ def return_secgp_lists(ingress_data):
     for ingress in ingress_data:
         for cidr_block in ingress['cidr_blocks']:
             result = {
+                'protocol': ingress['protocol'],
                 'cidr': cidr_block,
                 'from_port': ingress['from_port'],
                 'to_port': ingress['to_port'],
